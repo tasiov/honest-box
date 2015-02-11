@@ -1,0 +1,12 @@
+<% if @current_user %>
+
+	Hey, <%= @current_user.name %>, you're already logged in! <%= link_to "Logout!", logout_path %>
+
+<% else %>
+
+	<%= form_tag "/login" do %> 
+		email: <%= text_field_tag :email %>
+		<%= submit_tag "Log In" %>
+	<% end %>
+
+<% end %>

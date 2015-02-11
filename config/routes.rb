@@ -5,6 +5,12 @@ Rails.application.routes.draw do
 
   root 'boxes#chat'
 
+  get 'login' => 'sessions#login'
+  post 'login' => 'sessions#verify'
+  get 'logout' => 'sessions#logout'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
