@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :get_user
 
-
   def get_user
   	if session[:user_id]
   		@current_user = User.find(session[:user_id])
@@ -12,5 +11,4 @@ class ApplicationController < ActionController::Base
   		@current_user = nil
   	end
   end
-
 end

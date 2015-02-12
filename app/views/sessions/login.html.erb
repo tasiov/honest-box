@@ -5,8 +5,11 @@
 <% else %>
 
 	<%= form_tag "/login" do %> 
+		name: <%= text_field_tag :name %>
 		email: <%= text_field_tag :email %>
 		<%= submit_tag "Log In" %>
 	<% end %>
+
+<%= link_to "New to HonestBox? Sign Up!", new_path %>
 
 <% end %>
