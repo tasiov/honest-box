@@ -1,17 +1,18 @@
 body { 
   background-color: #fff; 
   color: #333; 
-  background-image: url("https://ununsplash.imgix.net/photo-1416431168657-a6c4184348ab?q=75&fm=jpg&s=20ba248730c200af0d30c9ba81854867")
+  font-family: "Courier New", Courier, monospace;
 }
 
 body, p, ol, ul, td {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size:   13px;
   line-height: 18px;
+  background-color: white;
 }
 
 pre {
-  background-color: #eee;
+  background-color: white;
   padding: 10px;
   font-size: 11px;
 }
