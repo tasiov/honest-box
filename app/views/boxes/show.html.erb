@@ -1,4 +1,17 @@
-<p id="notice"><%= notice %></p>
+<h2>
+<%= @box.title %>
+</h2>
+<form class="add-item">
+	<input type="text">
+	<input type="submit" class="pull-right" value="Submit">
+</form>
+<br>
+<div id="chatBox" chat-title="<%= @box.title %>">
+<!-- 	<ul>
+	</ul> -->
+</div>
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -10,5 +23,5 @@
   <%= @box.description %>
 </p>
 
-<%= link_to 'Edit', edit_box_path(@box) %> |
-<%= link_to 'Back', boxes_path %>
+<%# link_to 'Edit', edit_box_path(@box) %> |
+<%# link_to 'Back', boxes_path %> -->
