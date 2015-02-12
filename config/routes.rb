@@ -3,11 +3,12 @@ Rails.application.routes.draw do
 
   resources :boxes
 
-  root 'boxes#chat'
+  root 'boxes#index'
 
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#verify'
   get 'logout' => 'sessions#logout'
+  get 'new' => 'users#new'
 
 
 
