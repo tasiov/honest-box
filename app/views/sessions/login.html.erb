@@ -5,6 +5,7 @@
 <% else %>
 
 	<%= form_tag "/login" do %> 
+		name: <%= text_field_tag :name %>
 		email: <%= text_field_tag :email %>
 		<%= submit_tag "Log In" %>
 	<% end %>
