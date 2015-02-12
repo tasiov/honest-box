@@ -16,7 +16,7 @@ var adjustScroll = function(chatBox) {
 };
 
 var runScript = function() {
-	var chatBox = $('#chatBox');
+	var chatBox = $('#chat-box');
 	var room = chatBox.attr('chat-title');
 	var fire = new Firebase('https://flickering-inferno-4134.firebaseio.com/' + room);
 	bindChat(fire);
@@ -32,3 +32,4 @@ var runScript = function() {
 };
 
 $(document).ready(runScript);
+$(document).on("pageLoad", runScript);

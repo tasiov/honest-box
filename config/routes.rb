@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :boxes
 
-  root 'boxes#index'
+  root 'sessions#login'
 
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#verify'

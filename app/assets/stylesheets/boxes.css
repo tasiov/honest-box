@@ -20,6 +20,10 @@ p {
 	padding-left: 8px;
 }*/
 
+/*div #text-box {
+  background-color: white;
+  color: red;
+}*/
 
 .main {
 	/*border: solid 2px black;*/
@@ -32,8 +36,6 @@ p {
   padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
-
-
 }
 
 nav {
@@ -57,6 +59,8 @@ div #chat-box{
   padding-left: 10px;
   margin-left: 10px;
 
+  height: 450px;
+  overflow: scroll;
 }
 
 ul {
