@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Boxes</h1>
+  <nav>
+  <% if @current_user %>
+    Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to "Login", login_path %>
+  <% end %> 
+  </nav>
+  
+<h1>Honest Box</h1>
 
 <table>
   <thead>
@@ -17,8 +25,8 @@
         <td><%= box.title %></td>
         <td><%= box.description %></td>
         <td><%= link_to 'Join', box %></td>
-        <td><%= link_to 'Edit', edit_box_path(box) %></td>
-        <td><%= link_to 'Destroy', box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <!--   <td><%# link_to 'Edit', edit_box_path(box) %></td>
+        <td><%# link_to 'Destroy', box, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +34,40 @@
 
 <br>
 
+<p>
 <%= link_to 'New Box', new_box_path %>
+</p>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="boxes.css">
+</head>
+
+<nav>
+back  
+</nav>
+<section>
+  <div>
+  Suggestion Box: Zak the Baker
+  </div>
+
+  <div>
+  Wyncode Retrospective
+  </div>
+
+  <div>
+  Ideas for Pitch Day
+  </div>
+
+  <div>Suggestion Box: The LAB Miami
+  </div>
+</section>
+
+<section>
+<div>Thoughts on Wynwood Street Art</div>
+<div>Sports Box</div>
+<div>Art Box</div>
+<div>Music Box</div>
+</section>
+
+</html>

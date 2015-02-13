@@ -1,7 +1,22 @@
+nav {
+  width: 59%;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 15px;
+  margin: 0px 450px 5px 50px;
+  font-family: "Courier New", Courier, monospace;
+  opacity: .8;
+  font-weight: 500;
+}
+
+
 body { 
   background-color: #fff; 
   color: #333; 
   font-family: "Courier New", Courier, monospace;
+
 }
 
 body, p, ol, ul, td {
@@ -11,6 +26,10 @@ body, p, ol, ul, td {
   background-color: white;
 }
 
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+}
 pre {
   background-color: white;
   padding: 10px;
@@ -58,4 +77,11 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size:   20px;
+  text-align: center;
+  
 }

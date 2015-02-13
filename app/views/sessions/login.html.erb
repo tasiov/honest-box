@@ -1,15 +1,21 @@
-<% if @current_user %>
+<div class="logo">
+</div>
+<div class="login">
+	<% if @current_user %>
 
-	Hey, <%= @current_user.name %>, you're already logged in! <%= link_to "Logout!", logout_path %>
+		Hey, <%= @current_user.name %>, you're already logged in! <%= link_to "Logout!", logout_path %>
 
-<% else %>
+	<% else %>
 
-	<%= form_tag "/login" do %> 
-		name: <%= text_field_tag :name %>
-		email: <%= text_field_tag :email %>
-		<%= submit_tag "Log In" %>
-	<% end %>
+		<%= form_tag "/login" do %>
+			name: <%= text_field_tag :name %>
+			email: <%= text_field_tag :email %>
+			<%= submit_tag "Log In" %>
+		<% end %>
 
-<%= link_to "New to HonestBox? Sign Up!", new_path %>
+	<div class="newuser">
+		<%= link_to "New to HonestBox? Sign Up!", new_path %>
+	</div>
 
 <% end %>
+</div>

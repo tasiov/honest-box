@@ -27,7 +27,11 @@
 <%# link_to 'Back', boxes_path %> -->
 
 <nav>
-HonestBox
+<% if @current_user %>
+	Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
+<% else %>
+	<%= link_to "Login", login_path %>
+<% end %>	
 </nav>
 
 <div class="main">
@@ -47,7 +51,9 @@ HonestBox
 </div>
 
 <div class="people">
-<h2 id="people-bar" user="<%= @current_user.name %>">People Box </h2>
+
+<h2 id="people-bar" user="<%= @current_user.name %>"> Honest Folks </h2>
+
 People signed in to this particular box will be listed here:
 
 <% @box.users.each do |user| %>
