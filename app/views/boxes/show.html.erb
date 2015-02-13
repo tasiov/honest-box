@@ -26,9 +26,15 @@
 <%# link_to 'Edit', edit_box_path(@box) %> |
 <%# link_to 'Back', boxes_path %> -->
 
-<nav>
-HonestBox
-</nav>
+	<nav>
+	<% if @current_user %>
+		Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
+	<% else %>
+		<%= link_to "Login", login_path %>
+	<% end %>	
+	</nav>
+
+	
 <div class="main">
 	<h1 class="top-bar">Wyncode Suggestion Box</h1>
 

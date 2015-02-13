@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+  <nav>
+  <% if @current_user %>
+    Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to "Login", login_path %>
+  <% end %> 
+  </nav>
+  
 <h1>Listing Boxes</h1>
 
 <table>
