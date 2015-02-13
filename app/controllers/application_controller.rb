@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :get_user
+  before_action :log_params
 
   def get_user
   	if session[:user_id]
@@ -10,5 +11,11 @@ class ApplicationController < ActionController::Base
   	else
   		@current_user = nil
   	end
+  end
+
+  def log_params
+    Rails.logger.debug "********************"
+    Rails.logger.debug params
+    Rails.logger.debug "********************"
   end
 end

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :users
 
-  resources :boxes
+  resources :boxes do 
+    member do
+      get :join
+      get :leave
+    end
+  end
 
   root 'sessions#login'
 

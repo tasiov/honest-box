@@ -1,5 +1,5 @@
 class BoxesController < ApplicationController
-  before_action :set_box, only: [:show, :edit, :update, :destroy]
+  before_action :set_box, only: [:show, :edit, :update, :destroy, :join]
 
   # GET /boxes
   # GET /boxes.json
@@ -10,7 +10,14 @@ class BoxesController < ApplicationController
   # GET /boxes/1
   # GET /boxes/1.json
   def show
-    p @current_user
+    @box.users << @current_user
+    @box.save
+  end
+
+  def leave
+    @current_user.box = nil
+    @current_user.save
+    redirect_to :boxes
   end
 
   # GET /boxes/new
