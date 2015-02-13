@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+	skip_before_action :redirect_unless_loggedin
+
 	def login
 	end
 

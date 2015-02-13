@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-  <nav>
+<nav>
   <% if @current_user %>
     Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
   <% else %>
     <%= link_to "Login", login_path %>
   <% end %> 
-  </nav>
+  </nav> 
   
-<h1>Honest Box</h1>
+<h1>HonestBox</h1>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -21,16 +21,40 @@
 
   <tbody>
     <% @boxes.each do |box| %>
-      <tr>
-        <td><%= box.title %></td>
-        <td><%= box.description %></td>
-        <td><%= link_to 'Join', box %></td>
-      <!--   <td><%# link_to 'Edit', edit_box_path(box) %></td>
-        <td><%# link_to 'Destroy', box, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
+      <div>
+        <br><%= box.title %></td>
+        <br><%= box.description %></td>
+        <br><%= link_to 'Join', box %></td>
+
+    <td><%= link_to 'Edit', edit_box_path(box) %></td>
+        <td><%= link_to 'Destroy', box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    <td><%# link_to 'Edit', edit_box_path(box) %></td>
+        <td><%# link_to 'Destroy', box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </div>
+    <% end %> 
   </tbody>
-</table>
+</table> -->
+
+<section>
+<% @boxes.each do |box| %>
+  <div>
+  <%= box.title %>
+  <br>
+  <%= box.description %>
+  </br>
+  <br>
+  <%= link_to 'Join', box %>
+  </br>
+  <!-- <br>
+  <%= link_to 'Edit', edit_box_path(box) %>
+  </br> -->
+  </div>
+  <% end %>
+</section>
+
+
 
 <br>
 
@@ -38,14 +62,8 @@
 <%= link_to 'New Box', new_box_path %>
 </p>
 
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="boxes.css">
-</head>
+<!-- /*<link rel="stylesheet" type="text/css" href="boxes.css">
 
-<nav>
-back  
-</nav>
 <section>
   <div>
   Suggestion Box: Zak the Baker
@@ -70,4 +88,4 @@ back
 <div>Music Box</div>
 </section>
 
-</html>
+</html> -->
