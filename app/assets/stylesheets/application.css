@@ -17,7 +17,7 @@
   background-color: #fff; 
   color: #333; 
   font-family: "Courier New", Courier, monospace;
-  background-image: url(image-path('logo.png'));
+  background-image: url('/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 0px;
