@@ -39,7 +39,7 @@
 
 	<div id="chat-box" chat-title="<%= @box.title %>">
 		<ul>
-			Hello
+			
 		</ul>
 	</div>
 
@@ -55,7 +55,7 @@
 <h2 id="people-bar" user="<%= @current_user.name %>"> Honest Folks </h2>
 
 People signed in to this particular box will be listed here:
-
+<br>
 <% @box.users.each do |user| %>
 	<br><%= user.name %>
 <% end %>
