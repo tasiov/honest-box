@@ -26,19 +26,18 @@
 <%# link_to 'Edit', edit_box_path(@box) %> |
 <%# link_to 'Back', boxes_path %> -->
 
-	<nav>
-	<% if @current_user %>
-		Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
-	<% else %>
-		<%= link_to "Login", login_path %>
-	<% end %>	
-	</nav>
+<nav>
+<% if @current_user %>
+	Hi, <%= @current_user.name %>! | <%= link_to "Logout", logout_path %>
+<% else %>
+	<%= link_to "Login", login_path %>
+<% end %>	
+</nav>
 
-	
 <div class="main">
 	<h1 class="top-bar">Wyncode Suggestion Box</h1>
 
-	<div id="chat-box">
+	<div id="chat-box" chat-title="<%= @box.title %>">
 		<ul>
 			Hello
 		</ul>
@@ -52,9 +51,15 @@
 </div>
 
 <div class="people">
-<h2 id="people-bar"> Honest Folks </h2>
+
+<h2 id="people-bar" user="<%= @current_user.name %>"> Honest Folks </h2>
+
 People signed in to this particular box will be listed here:
-<br>-Enide
-<br>-Tasio
-<br>-Carmen
+
+<% @box.users.each do |user| %>
+	<br><%= user.name %>
+<% end %>
+
 </div>
+<%= link_to "Leave", leave_box_path %>
+

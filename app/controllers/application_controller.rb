@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :get_user
   before_action :redirect_unless_loggedin
 
+
   def get_user
   	if session[:user_id]
   		@current_user = User.find(session[:user_id])
@@ -12,6 +13,7 @@ class ApplicationController < ActionController::Base
   		@current_user = nil
   	end
   end
+
 
   def redirect_unless_loggedin
       redirect_to root_path unless @current_user
