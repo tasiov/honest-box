@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'pg'
 
+gem 'rails_12factor'
+
 # group :development do
 # 	gem 'sqlite3'
 # end
