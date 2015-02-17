@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#verify'
   get 'logout' => 'sessions#logout'
-  get 'new' => 'users#new'
 
 
 
